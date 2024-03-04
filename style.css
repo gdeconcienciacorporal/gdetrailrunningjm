@@ -1,0 +1,123 @@
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 90%; /* Utiliza porcentaje en lugar de píxeles */
+  margin: 0 auto;
+  padding: 1em; /* Utiliza em en lugar de píxeles */
+}
+
+.main-container {
+  background-color: #2c2c3069;
+  padding: 2em; /* Utiliza em en lugar de píxeles */
+  margin: 0; /* Eliminado para evitar márgenes laterales en dispositivos pequeños */
+  text-align: center;
+}
+
+.sub-container {
+  background-color: #ffffff;
+  padding: 2em; /* Utiliza em en lugar de píxeles */
+  margin: 1em 0; /* Utiliza em en lugar de píxeles */
+}
+
+.sub-container h2 {
+  color: #333333;
+  font-size: 1.5em;
+  margin: 0; /* Eliminado para evitar márgenes predeterminados */
+  font-weight: bold;
+}
+
+.sub-container p {
+  color: #666666;
+}
+
+.column-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  padding: 1em; /* Utiliza em en lugar de píxeles */
+  text-align: center;
+  border: 1px solid #b21313;
+}
+
+.small-paragraph-container {
+  background-color: #f4f4f4;
+  padding: 2em; /* Utiliza em en lugar de píxeles */
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  video {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+  }
+
+  .main-container,
+  .sub-container,
+  .column {
+    margin: 0; /* Elimina márgenes laterales en dispositivos pequeños */
+  }
+}
+
+.sub-container h4 {
+  background-color: #b6273f;
+  padding: 2em; /* Utiliza em en lugar de píxeles */
+  margin: 0; /* Elimina márgenes predeterminados */
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.image-container {
+  background-color: #fffdfd;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  border-radius: 8px; 
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container video {
+  max-width: 100%;
+  height: auto;
+  display: grid; /* Asegura que el video se centre correctamente */
+  grid-template-columns: 
+      repeat(auto-fit, minmax(150px, 1fr)
+      );
+      gap:32px;
+  margin: 0 auto; /* Centra el video horizontalmente */
+  object-fit: cover; /* Añadido para ajustar el video en el contenedor sin distorsionarse */
+}
+.imagen-chica {
+  max-width: 50%; /* Puedes ajustar el porcentaje según tus necesidades */
+  height: auto;
+}
